@@ -1,0 +1,59 @@
+name: tranqulity
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  lottie: ^3.3.2
+  pin_code_fields: ^8.0.1
+  circular_countdown_timer: ^0.2.4
+  toggle_switch: ^2.3.0
+
+
+
+  flutter:
+    sdk: flutter
+
+
+  flutter_launcher_icons: ^0.14.4
+  flutter_screenutil: ^5.9.3
+  flutter_svg: ^2.2.1
+
+
+  cupertino_icons: ^1.0.8
+  rename: ^3.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/lotties/
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/inter.ttf
+
+    - family: Mystery Quest
+      fonts:
+        - asset: assets/fonts/mystery_quest.ttf
+
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logo.png"
