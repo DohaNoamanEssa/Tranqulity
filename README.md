@@ -47,21 +47,23 @@ It follows **Clean Architecture principles** to ensure separation of concerns, m
 
 The project follows **Clean Architecture** structure:
 
+```text
 lib/
 │
 ├── core/
-│ ├── logic/
-│ ├── ui/
-│ └── services/
+│   ├── logic/
+│   ├── ui/
+│   └── services/
 │
 ├── features/
-│ ├── auth/
-│ ├── chat/
-│ └── profile/
+│   ├── auth/
+│   ├── chat/
+│   └── profile/
 │
 ├── models/
 │
 └── main.dart
+
 
 ## 👩‍💻 Developer
 
