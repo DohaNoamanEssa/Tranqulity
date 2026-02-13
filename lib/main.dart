@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tranqulity/core/logic/helper_methods.dart';
+import 'package:tranqulity/views/about_us.dart';
 import 'package:tranqulity/views/about_work.dart';
-import 'package:tranqulity/views/home/pages/profile.dart';
+import 'package:tranqulity/views/auth/login.dart';
+import 'package:tranqulity/views/auth/register.dart';
+import 'package:tranqulity/views/home/pages/quotes.dart';
+import 'package:tranqulity/views/home/view.dart';
 import 'package:tranqulity/views/splash.dart';
 
+import 'core/logic/cache_helper.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await CacheHelper.init();
   runApp(const MyApp());
 }
 
@@ -31,7 +38,7 @@ class MyApp extends StatelessWidget {
             textTheme: TextTheme(
               displaySmall: TextStyle(color: Color(0XFF000000)),
               displayLarge: TextStyle(color: Color(0XFF000000)),
-              displayMedium:  TextStyle(color: Color(0XFF000000)),
+              displayMedium: TextStyle(color: Color(0XFF000000)),
             ),
             appBarTheme: AppBarTheme(
               centerTitle: false,
@@ -39,11 +46,10 @@ class MyApp extends StatelessWidget {
                 color: Color(0xff101010),
                 fontWeight: FontWeight.w700,
                 fontSize: 24,
-
               ),
-            )
+            ),
           ),
-          home:  SplashView(),
+          home: RegisterView(),
         );
       },
     );

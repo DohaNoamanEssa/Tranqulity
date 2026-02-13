@@ -24,11 +24,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     TextEditingController? emailController;
     return Scaffold(
-      appBar: AppBar(
-        // leading: AppImage(image: "slider.svg"),
-        title: Text("Edit Profile"),
-        centerTitle: false,
-      ),
+
       body: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.all(24.r),
@@ -116,7 +112,6 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
         ),
       ),
-      drawer: AppDrawerView(),
 
     );
   }

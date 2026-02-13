@@ -16,4 +16,18 @@ class InputValidator {
     }
     return null;
   }
+
+  static String? emailValidator(String? value) {
+    if (value == null || value.trim().isEmpty) {
+      return "Email must not be empty";
+    }
+
+    final emailRegExp = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
+
+    if (!emailRegExp.hasMatch(value)) {
+      return "Enter a valid email address";
+    }
+
+    return null;
+  }
 }

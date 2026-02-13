@@ -5,9 +5,7 @@ import 'app_button.dart';
 import 'app_image.dart';
 
 class AppMenuDialog extends StatefulWidget {
-  final bool isCreatePassword;
-
-  const AppMenuDialog({super.key, this.isCreatePassword = false});
+  const AppMenuDialog({super.key});
 
   @override
   State<AppMenuDialog> createState() => _DialogePageState();

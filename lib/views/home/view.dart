@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tranqulity/core/logic/helper_methods.dart';
+import 'package:tranqulity/core/ui/app_drawer.dart';
 import 'package:tranqulity/views/assistent.dart';
 import 'package:tranqulity/views/home/pages/chats.dart';
 import 'package:tranqulity/views/home/pages/profile.dart';
@@ -26,6 +27,9 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(list[currentIndex].title),
+      ),
 
       body: list[currentIndex].page,
       extendBody: true,
@@ -50,8 +54,8 @@ class _HomeViewState extends State<HomeView> {
             ),
             activeIcon: AppImage(
               image: list[index].icon,
-              width: 28.w,
-              height: 28.h,
+              width: 32.w,
+              height: 32.h,
               color: Color(0xffffffff),
             ),
             label: list[index].title,
@@ -79,6 +83,7 @@ class _HomeViewState extends State<HomeView> {
         ),
 
       ),
+      drawer: AppDrawerView(),
           );
   }
 }

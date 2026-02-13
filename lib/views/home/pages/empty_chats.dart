@@ -33,7 +33,6 @@ class EmptyChatsView extends StatelessWidget {
           ),
         ),
       ),
-      drawer: AppDrawerView(),
     );
   }
 }

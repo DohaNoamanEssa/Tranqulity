@@ -100,7 +100,7 @@ class _OnBoardindViewState extends State<OnBoardingView> {
           children: [
             if (!isLast)
               InkWell(
-                onTap: () => goTo(LoginView()),
+                onTap: () => goTo(LoginView(),canPop: false),
                 child: Text(
                   "skip".toTitleCase(),
                   style: TextStyle(
@@ -119,7 +119,7 @@ class _OnBoardindViewState extends State<OnBoardingView> {
                     curve: Curves.easeInOut,
                   );
                 } else {
-                  goTo(LoginView());
+                  goTo(LoginView(),canPop: false);
                 }
               },
 

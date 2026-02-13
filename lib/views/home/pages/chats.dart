@@ -15,11 +15,7 @@ class _ChatsPageState extends State<ChatsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        // leading: AppImage(image: "slider.svg"),
-        title: Text("Chats"),
-        centerTitle: false,
-      ),
+
 
       body: SafeArea(
         child: SingleChildScrollView(
@@ -33,7 +29,6 @@ class _ChatsPageState extends State<ChatsPage> {
           ),
         ),
       ),
-      drawer: AppDrawerView(),
 
 
 

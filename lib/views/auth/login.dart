@@ -43,6 +43,7 @@ class _LoginViewState extends State<LoginView> {
                 SizedBox(height: 10.h),
                 AppInput(
                   controller: emailController,
+                  validator: InputValidator.emailValidator,
                   keyboardType: TextInputType.emailAddress,
                   hintText: "amramer522@gmail.com",
                 ),
@@ -89,7 +90,7 @@ class _LoginViewState extends State<LoginView> {
                     ),
                     SizedBox(width: 8.w),
                     Expanded(child: AppButton(buttonTitle: "Log In",onPressed: (){
-                      goTo(HomeView(),);
+                      goTo(HomeView(),canPop: false);
                     },)),
                   ],
                 ),

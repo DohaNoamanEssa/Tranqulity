@@ -1,28 +1,70 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:tranqulity/core/logic/dio_helper.dart';
 import 'package:tranqulity/core/ui/app_appbar.dart';
 
 import '../core/ui/app_image.dart';
 
-class AboutUsView extends StatelessWidget {
+class AboutUsView extends StatefulWidget {
   const AboutUsView({super.key});
+
+  @override
+  State<AboutUsView> createState() => _AboutUsViewState();
+}
+
+class _AboutUsViewState extends State<AboutUsView> {
+  int currentIndex = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    getData();
+  }
+
+  late List<AboutUsData> list;
+  DataState state = DataState.loading;
+
+  Future<void> getData() async {
+    state = DataState.loading;
+    setState(() {});
+    final resp = await DioHelper.getData("api/AboutUs");
+
+    if (resp!.isSuccess && resp.data != null) {
+      list = [AboutUsData.fromJson(resp.data)];
+      state = DataState.success;
+    } else {
+      state = DataState.failed;
+    }
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppAppBar(title: "About Us",),
+      appBar: AppAppBar(title: "About Us"),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16.r),
         child: Column(
           children: [
             AppImage(
-              image: "logo.png",
+              image: state == DataState.success
+                  ? (list[currentIndex].imageUrl != "")?list[currentIndex].imageUrl  : "logo.png"
+                  : "https://static.vecteezy.com/system/resources/previews/021/756/508/non_2x/error-icon-3d-rendering-illustration-vector.jpg",
               bottomSpace: 14.h,
               width: 238.w,
               height: 238.h,
             ),
             Text(
-              "Welcome to Tranquility\nwhere relaxation meets innovation.",
+              state == DataState.success ? list[currentIndex].title : "error",
+              style: TextStyle(
+                color: Color(0xff000000),
+                fontSize: 20.sp,
+                fontWeight: FontWeight.w500,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            Text(
+              state == DataState.success ? list[currentIndex].body.replaceAll("</p>", "").replaceAll("<p>", "") : "error",
               style: TextStyle(
                 color: Color(0xff000000),
                 fontSize: 20.sp,
@@ -68,5 +110,17 @@ class AboutUsView extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class AboutUsData {
+  late final String title;
+  late final String body;
+  late final String imageUrl;
+
+  AboutUsData.fromJson(Map<String, dynamic> json) {
+    title = json['title'] ?? "";
+    body = json['body'] ?? "";
+    imageUrl = json['imageUrl'] ?? "";
   }
 }

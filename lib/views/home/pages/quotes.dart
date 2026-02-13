@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tranqulity/core/ui/app_image.dart';
+import 'package:flutter/services.dart';
 
 import '../../../core/ui/app_appbar.dart';
 import '../../../core/ui/app_drawer.dart';
 
-class QuotesPage extends StatelessWidget {
+class QuotesPage extends StatefulWidget {
   const QuotesPage({super.key});
+
+  @override
+  State<QuotesPage> createState() => _QuotesPageState();
+}
+
+class _QuotesPageState extends State<QuotesPage> {
+  String copiedText = "";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppAppBar(
-        title: "Quotes",
-      ),
       body: Stack(
         children: [
           Positioned.fill(
@@ -38,7 +43,8 @@ class QuotesPage extends StatelessWidget {
                       offset: Offset(0, 4),
                       color: Color(0xff000000).withValues(alpha: .25),
                     ),
-                  ],                ),
+                  ],
+                ),
                 // width: 403.w,
                 // height: 500.h,
                 child: SingleChildScrollView(
@@ -87,7 +93,15 @@ class QuotesPage extends StatelessWidget {
                             ),
                           ),
                           SizedBox(width: 7.w),
-                          AppImage(image: "copy.svg"),
+                          IconButton(
+                            icon: AppImage(image: "copy.svg"),
+                            onPressed: () {
+                              Clipboard.setData(
+                                ClipboardData(text: copiedText),
+                              );
+                              print("000000000 doha $copiedText");
+                            },
+                          ),
                         ],
                       ),
                     ],
@@ -98,8 +112,6 @@ class QuotesPage extends StatelessWidget {
           ),
         ],
       ),
-      drawer: AppDrawerView(),
-
     );
   }
 }

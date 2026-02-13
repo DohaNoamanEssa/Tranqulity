@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tranqulity/core/logic/helper_methods.dart';
 import 'package:tranqulity/core/ui/app_button.dart';
 import 'package:tranqulity/core/ui/app_image.dart';
-import 'package:tranqulity/views/auth/login.dart';
+import 'package:tranqulity/views/home/view.dart';
 import '../../core/logic/input_validator.dart';
 import '../../core/ui/app_appbar.dart';
 import '../../core/ui/app_input.dart';
@@ -62,7 +62,7 @@ class _ChangePasswordViewState extends State<ChangePasswordView> {
                 ),
                 SizedBox(height: 36.h,),
                 AppButton(onPressed: () {
-                  goTo(LoginView());
+                  goTo(HomeView());
 
                 }, buttonTitle: "Change Password"),
               ],

@@ -14,6 +14,8 @@ class AppInput extends StatefulWidget {
   final String? Function(String?)? validator;
   final String? hintText;
   final int maximumLines;
+  final bool isrReadOnly;
+
 
 
   const AppInput({
@@ -28,6 +30,7 @@ class AppInput extends StatefulWidget {
     this.validator,
     this.hintText,
     this.maximumLines=1,
+    this.isrReadOnly=false,
   });
 
   @override
@@ -47,6 +50,7 @@ class _AppInputState extends State<AppInput> {
         children: [
           Expanded(
             child: TextFormField(
+              readOnly: widget.isrReadOnly,
               maxLines: widget.maximumLines,
               controller: widget.controller,
               validator: widget.validator,

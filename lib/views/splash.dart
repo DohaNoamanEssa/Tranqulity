@@ -15,7 +15,7 @@ class _SplashViewState extends State<SplashView> {
   @override
   initState() {
     super.initState();
-    goTo(OnBoardingView(), delayInSeconds: 2);
+    goTo(OnBoardingView(), delayInSeconds: 2,canPop: false);
   }
 
   @override

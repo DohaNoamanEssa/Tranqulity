@@ -17,10 +17,11 @@ class _AboutWorkViewState extends State<AboutWorkView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
+
       appBar: AppAppBar(
         title: "About Work",
         isCenter: true,
-
 
         list: [
           PopupMenuButton<ListTile>(
@@ -29,10 +30,7 @@ class _AboutWorkViewState extends State<AboutWorkView> {
               return [
                 PopupMenuItem(
                   child: ListTile(
-                    leading: AppImage(
-                      image: "edit_menu.svg",
-
-                    ),
+                    leading: AppImage(image: "edit_menu.svg"),
                     title: Text(
                       "Edit Title",
                       style: TextStyle(
@@ -42,7 +40,7 @@ class _AboutWorkViewState extends State<AboutWorkView> {
                       ),
                     ),
                   ),
-                  onTap: (){
+                  onTap: () {
                     showDialog(
                       context: context,
                       builder: (context) => AppMenuDialog(),
@@ -51,10 +49,7 @@ class _AboutWorkViewState extends State<AboutWorkView> {
                 ),
                 PopupMenuItem(
                   child: ListTile(
-                    leading: AppImage(
-                      image: "delete.svg",
-
-                    ),
+                    leading: AppImage(image: "delete.svg"),
                     title: Text(
                       "Delete Chat",
                       style: TextStyle(
@@ -94,11 +89,19 @@ class _AboutWorkViewState extends State<AboutWorkView> {
           ),
         ),
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
+      bottomNavigationBar: AnimatedPadding(
+        duration: const Duration(milliseconds: 200),
+        padding: EdgeInsets.only(
+          bottom: MediaQuery.of(context).viewInsets.bottom + 16.r,
+          left: 16.r,
+          right: 16.r,
+          top: 16.r,
+        ),
         child: Row(
           children: [
-            Expanded(child: AppInput(hintText: "write your message")),
+            Expanded(
+              child: AppInput(hintText: "write your message", bottomSpace: 0),
+            ),
             SizedBox(width: 10),
             CircleAvatar(
               radius: 30,

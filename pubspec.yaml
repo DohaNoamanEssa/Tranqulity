@@ -13,17 +13,19 @@ dependencies:
   pin_code_fields: ^8.0.1
   circular_countdown_timer: ^0.2.4
   toggle_switch: ^2.3.0
+  flutter_lints: ^5.0.0
+  image_picker: ^1.2.1
+  dio: ^5.9.0
+  shared_preferences: ^2.5.4
 
 
 
   flutter:
     sdk: flutter
 
-
   flutter_launcher_icons: ^0.14.4
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.2.1
-
 
   cupertino_icons: ^1.0.8
   rename: ^3.1.0
@@ -32,7 +34,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^5.0.0
+
 
 flutter:
 
