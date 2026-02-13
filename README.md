@@ -1,16 +1,88 @@
-# tranqulity
+🌿 Tranqulity
+A modern Flutter mobile application built with clean architecture and scalable structure.
+The application includes real-time chat functionality, user profile management, and API integration.
 
-A new Flutter project.
+📱 About The App
+Tranqulity is a scalable and maintainable mobile application developed using Flutter.
+It follows clean architecture principles to ensure separation of concerns and easy future expansion.
 
-## Getting Started
+The app provides:
 
-This project is a starting point for a Flutter application.
+💬 Real-time Chat System
 
-A few resources to get you started if this is your first Flutter project:
+👤 User Profile Management
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+🌐 API Integration
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+📱 Responsive & Clean UI
+
+Built using Flutter.
+
+🚀 Features
+
+🔐 Authentication (Login / Register)
+
+💬 Chat functionality
+
+👤 View & Edit User Profile
+
+🌍 REST API Integration
+
+⚡ Error Handling & Loading States
+
+📐 Responsive Design using ScreenUtil
+
+🧩 Reusable Custom Widgets
+
+🏗️ Architecture
+
+The project follows Clean Architecture principles:
+
+lib/
+│
+├── core/
+│   ├── logic/
+│   ├── ui/
+│   └── services/
+│
+├── features/
+│   ├── auth/
+│   ├── chat/
+│   └── profile/
+│
+├── models/
+│
+└── main.dart
+
+🛠️ Tech Stack
+
+Flutter
+
+Dart
+
+Dio (API Requests)
+
+RESTful APIs
+
+ScreenUtil
+
+⚙️ Installation
+
+1️⃣ Clone the repository
+git clone https://github.com/your-username/tranqulity.git
+
+2️⃣ Install dependencies
+flutter pub get
+
+3️⃣ Run the app
+flutter run
+
+👩‍💻 Developer
+Doha Noaman
+Mobile Application Developer
+Flutter Developer
+
+
+
+
+
