@@ -63,9 +63,8 @@ lib/
 │
 └── main.dart
 
-
 ## 👩‍💻 Developer
 
-Doha Noaman
-Mobile Application Developer
-Flutter Developer
+**💻 Doha Noaman**  
+*Mobile Application Developer*  
+*Flutter Developer*
