@@ -1,22 +1,23 @@
 🌿 Tranqulity
+
 A modern Flutter mobile application built with clean architecture and scalable structure.
 The application includes real-time chat functionality, user profile management, and API integration.
 
 📱 About The App
-Tranqulity is a scalable and maintainable mobile application developed using Flutter.
-It follows clean architecture principles to ensure separation of concerns and easy future expansion.
 
-The app provides:
+Tranqulity is a scalable and maintainable mobile application developed using Flutter.
+
+It follows Clean Architecture principles to ensure separation of concerns, maintainability, and easy future expansion.
+
+✨ Core Modules
 
 💬 Real-time Chat System
 
 👤 User Profile Management
 
-🌐 API Integration
+🌐 REST API Integration
 
 📱 Responsive & Clean UI
-
-Built using Flutter.
 
 🚀 Features
 
@@ -36,7 +37,7 @@ Built using Flutter.
 
 🏗️ Architecture
 
-The project follows Clean Architecture principles:
+The project follows Clean Architecture structure:
 
 lib/
 │
@@ -67,7 +68,6 @@ RESTful APIs
 ScreenUtil
 
 ⚙️ Installation
-
 1️⃣ Clone the repository
 git clone https://github.com/your-username/tranqulity.git
 
@@ -78,11 +78,7 @@ flutter pub get
 flutter run
 
 👩‍💻 Developer
+
 Doha Noaman
 Mobile Application Developer
 Flutter Developer
-
-
-
-
-
