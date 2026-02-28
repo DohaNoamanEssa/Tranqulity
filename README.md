@@ -23,8 +23,10 @@ It follows **Clean Architecture principles** to ensure separation of concerns, m
 
 
 ## 📥 Download APK
+🔗 [Download Tranqulity APK]
+(https://drive.google.com/file/d/1feY1FBANrhQh76BZaQxA2NdiX7uADvJ9/view?usp=drive_link)
 
-🔗 [Download Tranqulity APK](https://drive.google.com/file/d/1t7BHmHOwVHsfeXYeg4mYZ2DPoFzy1CGM/view?usp=drive_link)
+
 
 ## ✨ Core Modules
 
