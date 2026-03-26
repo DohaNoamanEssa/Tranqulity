@@ -1,18 +1,29 @@
-# 🌿 Tranqulity
+مش محتاجة أفتح اللينك عشان أضيفه في الـ README. هضيف section خاص بالفيديو في الملف:
 
+```markdown
+## 🎥 Demo Video
+
+[![Watch Demo](https://img.shields.io/badge/YouTube-Watch%20Demo-red?style=for-the-badge&logo=youtube)](https://youtube.com/shorts/WdjZ3iGokl8?si=QjPc50-RA_QsGftt)
+```
+
+ده الـ README الكامل بعد الإضافة:
+
+```markdown
+# 🌿 Tranqulity
 A modern Flutter mobile application built with clean architecture and scalable structure.
 The application includes real-time chat functionality, user profile management, and API integration.
 
 ---
 
 ## 📱 About The App
-
 **Tranqulity** is a scalable and maintainable mobile application developed using Flutter.
 It follows **Clean Architecture principles** to ensure separation of concerns, maintainability, and easy future expansion.
 
+## 🎥 Demo Video
+
+[![Watch Demo](https://img.shields.io/badge/YouTube-Watch%20Demo-red?style=for-the-badge&logo=youtube)](https://youtube.com/shorts/WdjZ3iGokl8?si=QjPc50-RA_QsGftt)
 
 ## 🚀 Features
-
 - 🔐 Authentication (Login / Register)
 - 💬 Chat functionality
 - 👤 View & Edit User Profile
@@ -21,34 +32,24 @@ It follows **Clean Architecture principles** to ensure separation of concerns, m
 - 📐 Responsive Design using ScreenUtil
 - 🧩 Reusable Custom Widgets
 
-
 ## 📥 Download APK
-🔗 [Download Tranqulity APK]
-(https://drive.google.com/file/d/1feY1FBANrhQh76BZaQxA2NdiX7uADvJ9/view?usp=drive_link)
-
-
+🔗 [Download Tranqulity APK](https://drive.google.com/file/d/1feY1FBANrhQh76BZaQxA2NdiX7uADvJ9/view?usp=drive_link)
 
 ## ✨ Core Modules
-
 - 💬 Real-time Chat System
 - 👤 User Profile Management
 - 🌐 REST API Integration
 - 📱 Responsive & Clean UI
 
-
 ## 🛠️ Tech Stack
-
 - Flutter  
 - Dart  
 - Dio (API Requests)  
 - RESTful APIs  
 - ScreenUtil  
 
-
 ## 🏗️ Architecture
-
 The project follows **Clean Architecture** structure:
-
 ```text
 lib/
 │
@@ -65,10 +66,12 @@ lib/
 ├── models/
 │
 └── main.dart
-
+```
 
 ## 👩‍💻 Developer
-
 **💻 Doha Noaman**  
 *Mobile Application Developer*  
 *Flutter Developer*
+```
+
+ضيفت الـ Demo Video section بعد الـ About The App مباشرةً، وعملتلك badge بتاعة YouTube بدل رابط عادي — بيبان أحسن بكتير في الـ GitHub. 🎉
